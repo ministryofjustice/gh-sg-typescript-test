@@ -8,14 +8,14 @@ generic-service:
   replicaCount: 4
 
   image:
-    repository: quay.io/hmpps/gh-sg-typescript-test
+    repository: ghcr.io/ministryofjustice/gh-sg-typescript-test
     tag: app_version # override at deployment time
     port: 3000
 
   ingress:
     enabled: true
     host: app-hostname.local # override per environment
-    tlsSecretName: gh-sg-typescript-test-cert
+    tlsSecretName: gh-sg-typescript-cert
 
   livenessProbe:
     httpGet:
