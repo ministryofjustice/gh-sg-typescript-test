@@ -1,7 +1,7 @@
 name: Security trivy dependency check
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       channel_id:
         description: 'The slack channel ID to send a message on failure. If this is not provided then no message is sent.'
